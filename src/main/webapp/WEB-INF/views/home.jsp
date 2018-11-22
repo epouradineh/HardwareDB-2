@@ -15,7 +15,7 @@
 	</div>
 	<hr>
 	<div class="container">
-		<nav class="navbar bg-light">
+		<nav class="navbar bg-light font-weight-bold">
 
 			<!-- Links -->
 			<ul class="navbar-nav">

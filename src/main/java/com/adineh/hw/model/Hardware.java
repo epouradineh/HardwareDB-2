@@ -7,11 +7,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Digits;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
-
-import org.springframework.format.annotation.NumberFormat;
-import org.springframework.format.annotation.NumberFormat.Style;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class Hardware {
@@ -27,8 +25,9 @@ public class Hardware {
 	private String brand;
 	
 	private String model;
-	@NotNull(message="Please Enter a Number")
-	@NumberFormat(style=Style.DEFAULT)
+
+	@NotNull(message="Required Value")
+	@DecimalMin(value="1",message="Minimun Value is 1")
 	private Long numbers;
 
 	public Long getId() {

@@ -8,16 +8,13 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.Valid;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
-import org.springframework.format.annotation.NumberFormat;
-import org.springframework.format.annotation.NumberFormat.Style;
 
 @Entity
 @Table(name="hardware_usage")
@@ -36,8 +33,8 @@ public class Hardware_usage {
 	@DateTimeFormat(iso=ISO.DATE)
 	private Date usage_date;
 	
-	@NotNull(message="Please Enter a Number")
-	@NumberFormat(style=Style.DEFAULT)
+	@NotNull(message="Reequired Value")
+	@DecimalMin(value="1",message="Minimun Value is 1")
 	private Long numbers;
 
 	public Long getId() {

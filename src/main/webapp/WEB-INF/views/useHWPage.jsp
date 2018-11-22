@@ -42,9 +42,12 @@
 				<form:errors path="numbers" cssClass="text-warning"/><br>
 			<form:button  type="submit" class="btn btn-success" name="submit" >Use </form:button>
 		</form:form><br>
-		<a type="butten" class="btn btn-success" href="/hwList">Back to Hardware List</a>
-		<a type="butten" class="btn btn-success" href="/hwUsageList">Hardware Usage List</a>
-		<a type="button" class="btn btn-success" href="/">Go to Home Page</a>
+		<div class="container"><a type="butten" class="btn btn-success" href="/hwList">Back to Hardware List</a></div><br>
+		<div class="container"><a type="butten" class="btn btn-success" href="/hwUsageList">Back to Hardware Usage List</a></div><br>
+		<div class="container"><a type="button" class="btn btn-success" href="/">Go to Home Page</a></div><br>
+		
+		
+		
 	</div>
 	<script type="text/javascript" src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="webjars/jquery/3.3.1-1/jquery.min.js"></script>
